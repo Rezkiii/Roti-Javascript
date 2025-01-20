@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Selamat! Anda Mendapatkan Roti</title>  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
+</head>  
+<body class="flex items-center justify-center h-screen bg-gray-100">  
+    <div class="text-center">  
+        <h1 class="text-4xl font-bold mb-4" id="rotiMessage"></h1>  
+        <p class="text-xl">Silakan Menikmati.</p>  
+        <img src="eat.gif" alt="Eat GIF" class="mt-4 w-64 h-auto mx-auto"> <!-- Add your GIF here -->  
+        <a href="index.html" class="mt-4 inline-block bg-blue-500 text-white p-2 rounded">Kembali ke Menu Utama</a>  
+    </div>  
+    <script>  
+        // Get the user's name from the URL query parameters  
+        const urlParams = new URLSearchParams(window.location.search);  
+        const name = urlParams.get('name');  
+        document.getElementById('rotiMessage').textContent = `Selamat ${name}, Anda Mendapatkan Roti!`;  
+    </script>  
+</body>  
+</html>  
